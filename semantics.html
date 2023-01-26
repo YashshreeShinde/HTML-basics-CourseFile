@@ -1,0 +1,77 @@
+<!-- Semantic Tags
+We can have more than one of these tags i.e we have can have more than one header tags
+1.<Header>
+2.<main>
+3.<nav> 
+4.<section>
+5.<article>
+6.<aside>
+    
+    
+<time>
+<mark>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics Tags</title>
+</head>
+<body>
+    <header>
+        <!--Now there can be more than one "nav" element per page,its important that they are labelled so assitive technology knows which nav is which-->
+        <!--A way to link the nav to h1 so that it understands that this h1 belongs to this nav-->
+        <!--If we dont have h1 then we can just identify as 
+               <nav aria-label="primary-navigation">-->
+        <nav aria-labelledby="primary-navigation">
+            <h1 id="primary-navigation">My Goals for this year</h1>
+        </nav>
+    </header>
+    <main>
+        <ul>
+            <li>Learning HTML</li>
+            <li>Planning a Vacation</li>
+        </ul>
+
+        <section id="section A">
+            <b>Section A</b> <br>
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, modi illum reiciendis inventore facilis eos aspernatur voluptatum nisi amet optio iste veritatis ipsam doloremque, deleniti, eius fugit assumenda illo tempora.
+         </section>
+         <section id="section B">
+             <b>Section B</b><br>
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit perspiciatis atque deleniti nobis dolorem, cupiditate veritatis omnis. Et ducimus similique optio laudantium voluptates ex, in eum quis suscipit vel.
+             Soluta, tenetur nisi architecto est blanditiis possimus fugiat molestiae facere repellat mollitia harum officia hic dolore quo sequi recusandae inventore alias. In repellat asperiores suscipit error sed exercitationem impedit eaque?
+         </section>
+
+
+         <!-- <mark> is used to highlight the text just like a marker -->
+         <article>
+            <b>Its a article</b><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim mollitia dolore aspernatur officiis blanditiis error perferendis corporis itaque qui quasi! Adipisci autem pariatur hic architecto quisquam maiores eaque magnam earum.
+            <mark>Cum fugit exercitationem suscipit vel dolorum obcaecati earum adipisci maior>mark distinctio quasi aliquam cumque aliquid reprehenderit similique, sed hic ullam saepe at iste nihil quos ea atque? Alias, debitis ea!</mark>
+            Ipsum rerum nobis rem, saepe error beatae perspiciatis corrupti magni hic enim odio ipsa temporibus placeat suscipit tempore neque optio ducimus a repudiandae dignissimos aspernatur distinctio officia tenetur culpa. Numquam!
+         </article>
+
+
+         <!--<aside> is often think of something which is placed on one side of page,like a sidebar or something is not as important to be placed in middle of the page-->
+         <aside>
+            <details>
+                <summary>
+                    Warranty information
+                </summary>
+                <p>The product will not be replaced after 6 months <time datetime="12:00">12am</time></p>
+            </details>
+        </aside>
+
+    </main>
+    
+    <footer>
+       <p>Yashshree Shinde</p> 
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>

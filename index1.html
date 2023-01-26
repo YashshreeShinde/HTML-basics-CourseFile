@@ -1,0 +1,148 @@
+<!-- Block and Inline Elements -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Yashshree Shinde">
+    <meta name="description" content="This is a description">
+    <link rel="icon" href="html.png">       <!--For icon use (rel="icon")-->
+    <link rel="stylesheet" href="index.css" type="text/css">  <!--This type of giving address of file is called as "relative reference"-->
+
+    <title>HTML COURSE</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <hr>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#section A">Go to section A</a>    
+                <!-- To go to the part(scroll the page) of the page where the id is "section A" -->
+                <!--After moving to that section-->
+                <!-- URL would be :- http://127.0.0.1:5500/index.html#section%20A -->
+            </li>
+            <li>
+                <a href="#section B">Go to section B</a>
+            </li>
+        </ul>
+    </nav>
+    <h2>My Daily Schedule</h2>
+    <p>Let me tell you how:
+        <br>
+        I learn more about web dev
+        <br>
+        I plan out my Schedule
+        <br>
+        I use resources from <abbr title="Mozilla Developer Network ">MDN</abbr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- no effect of this big space it wont show this space in browser,this is called as "white-space collapsing" -->
+        <br>
+        <p><strong>After space</strong></p>
+
+        <address>           <!--it makes address italic and provide semantic meaning-->
+            Bhosari,Pune
+        </address>
+        &lt &copy <a href="https://developer.mozilla.org/en-US/">MDN</a>    <!--This is called "absolute reference" as who-->
+        <a href="about.html">Click here</a>      <!--Relative reference-->
+    
+    </p>
+    <hr>
+
+
+
+
+    <!-- Lists -->
+
+    <!-- Ordered List -->
+    <p>Frontend</p>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>REACTJS</li>
+    </ol>
+
+    <!-- Unordered List -->
+    <h4>Places I would List to visit</h4>
+    <ul>
+        <li>Japan</li>
+        <li>Switzerland</li>
+    </ul>
+    <ul></ul>
+
+    <!-- Description Lists -->
+
+    <h4>Places I would like to avoid</h4>
+    <dl>
+        <dt>North Pole</dt>
+        <dd>I have heard this is <strong>cold</strong></dd>
+
+        <dt>South Pole</dt>
+        <dd>This is also cold</dd>
+    </dl>
+
+<!-- <dd> would indentation but <dt> won't have indentation -->
+    
+
+
+
+
+<!-- <section> -->
+
+    <section id="section A">
+       <b>Section A</b> <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, modi illum reiciendis inventore facilis eos aspernatur voluptatum nisi amet optio iste veritatis ipsam doloremque, deleniti, eius fugit assumenda illo tempora.
+    </section>
+    <section id="section B">
+        <b>Section B</b><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit perspiciatis atque deleniti nobis dolorem, cupiditate veritatis omnis. Et ducimus similique optio laudantium voluptates ex, in eum quis suscipit vel.
+        Soluta, tenetur nisi architecto est blanditiis possimus fugiat molestiae facere repellat mollitia harum officia hic dolore quo sequi recusandae inventore alias. In repellat asperiores suscipit error sed exercitationem impedit eaque?
+    </section>
+
+
+    <a href="#">Back to Top</a>   <!--Scrolls page to the top-->
+    <!--output:-  http://127.0.0.1:5500/index.html#      -->
+
+
+    <ul>
+        <li>
+            <!-- Download attribute -->
+            Download the <a href=html.png download>HTML5  favicon  </a>   <!--Downloads the data present when we go to that link-->    
+        </li>
+        <li>
+             <!--mailto: Mail to attribute (not a good practice to do but due to web crawlers)-->
+             Contact me at<a href="mailto:random@example.com">mail</a>
+        </li>
+        <li>
+            <!-- tel:Phone number -->
+            Dial <a href="tel:+123456">my phone number</a>
+
+        </li>
+        <li>
+            <!-- Open in new tab the following link(target=_blank) -->
+           Open <a href="https://www.google.com/" target="_blank">google</a> in a new Tab
+        </li>
+    </ul>
+
+
+    <p>
+        <a href="/">Back To Home
+        </a>
+    </p>
+
+<!---->
+</body>
+</html>

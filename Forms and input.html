@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="https://httpbin.org/get" method="get">
+
+
+        <fieldset>
+
+            <legend>Personal Info</legend>
+
+        <p>
+        <!-- The "for" attribute value of label should match the "id" value of input element-->
+        <label for="name">First Name:</label>
+
+
+        <!-- "name" attribute is how it is identified at the server level.So when we send this information on to the server ,the information of input element will be labelled by the whatever name we give to "name" attribute -->
+
+        <!-- Only one element on the page can have "autofocus" -->
+        <!-- Autofocus means when we load the website then cursor automatically get placed in the input element ,so that user can immediately start typing -->
+
+        <input type="text" 
+                name="name" 
+                placeholder="Enter your First Name"
+                id="FirstName"
+                autocomplete="on"
+                required
+                autofocus
+        >
+        
+        </p>
+
+
+
+        <!-- Instead of using <br> after every element ,we can use <p> tag ,as <p>starts on new line and seems more appropriate -->
+        <p>
+        <label for="lastName">Last Name:</label>
+        <input type="text" 
+        name="lastName" 
+        placeholder="Enter your last Name"
+        id="lastName"
+        autocomplete="on"
+        required
+        >
+        </p>
+
+
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" 
+            name="password" 
+            placeholder="Enter your password"
+            id="password"
+            autocomplete="on"
+            required
+            >
+        </p>
+
+        <!-- Regular expression can be given in "pattern" attribute -->
+        <!--"tel"-->
+        <p>
+            <label for="phone">Phone number:</label>
+            <input type="tel" 
+            name="phone" 
+            placeholder="5555555555"
+            id="phone"
+            autocomplete="on"
+            required
+            
+            pattern="[0-9]{10}"
+            >
+        </p>
+
+        <!-- scroll to select years -->
+        <p>
+            <label for="decade">Decade:</label>
+            <input type="number" 
+            name="decade" 
+            id="decade"
+            required
+            min="1980"
+            max="2020"
+            step="10"
+            value="1980"
+            >
+        </p>
+
+
+        <!-- Drop-down List -->
+        <p>
+            <label for="coffee">Favourite Coffee</label>
+            <select name="coffee" id="coffee"    multiple size="1"><!--We can have more than one element displayed at once-->
+
+            <!-- Optgroup for having groups in list -->
+            <optgroup label="A">
+                <option value="regular coffee">
+                    Regular Coffee
+                </option>
+                <option value="iced coffee"         selected>  <!--To have default selected-->
+                    Iced Coffee
+                </option>
+            </optgroup>
+
+            <optgroup label="B">
+                <option value="latte">
+                    Latte
+                </option>
+            </optgroup>
+            </select>
+        </p>
+
+
+        <!-- List drop-down -->
+        <!-- what differentiates it from normal drop down is,that if we start typing than it would match with the option that has similar spelling(basically filter and show according to our typing) and then we can select it-->
+        <label for="coffee">Favourite Coffee</label>
+        <input type="text" name="coffee" id="coffee" list="coffee-list">
+
+            <datalist id="coffee-list">
+                <option value="coffee">
+                <option value="expresso">
+                <option value="coffee">
+                <option value="coffee">
+                <option value="coffee">
+                <option value="coffee">
+            </datalist>
+
+    
+            
+        </fieldset>
+
+
+
+        <fieldset>
+            <legend>What is your favourite Food?</legend>
+
+            <!-- "name" attribute should be same in all radio buttons which ensures that only one radio button can be selected at a time -->
+            <!-- <p>
+                <input type="radio" name="food" id="tacos" value="tacos">
+                <label for="tacos">Tacos</label>
+            </p>
+            <p>
+                <input type="radio" name="food" id="pizza" value="pizza">
+                <label for="pizza">pizza</label>
+            </p>
+            <p>
+                <input type="radio" name="food" id="other" value="other">
+                <label for="other">other</label>
+            </p> -->
+            <p>
+                <input type="radio" name="food" id="tacos" value="a" >
+                <label for="tacos">Tacos</label>
+            </p>
+            <p>
+                <input type="radio" name="food" id="pizza" value="b">
+                <label for="pizza">pizza</label>
+            </p>
+            <p>
+                <input type="radio" name="food" id="other" value="c">
+                <label for="other">other</label>
+            </p>
+
+
+        <!-- name:value like this it is stored so even if tacos is selected it would be like food:"a" as value is given as "a" -->
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Do you have Pets?</legend>
+            <p>
+                <input type="checkbox" name="pets" id="dog" value="dog">
+                <label for="dog">Dog</label>
+            </p>
+            <p>
+                <input type="checkbox" name="pets" id="Cat" value="Cat">
+                <label for="Cat">Cat</label>
+            </p>
+            <p>
+                <input type="checkbox" name="pets" id="bird" value="bird">
+                <label for="bird">bird</label>
+            </p>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Send Me a Note</legend>
+
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message">
+
+            </textarea>
+        </fieldset>
+
+
+        <!-- Get method sends all data in url whereas Post does not -->
+        <button type="submit">Submit</button>
+        <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+        <button type="reset">reset</button>  <!--to reset the page-->
+    </form>
+</body>
+</html>
